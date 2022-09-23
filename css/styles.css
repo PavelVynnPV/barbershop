@@ -70,7 +70,7 @@ h2 {
 header {
   height: 100vh;
   max-width: 100%;
-  background-image: url(/img/header_bg.png);
+  background-image: url(/img/header_bg.png) !important;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
