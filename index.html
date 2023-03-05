@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>barbershop</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="img/x-icon" />
+    <link rel="icon" href="/favicon.ico" type="img/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header__container">
+        <div class="header_inner">
+          <a href="#"
+            ><img class="header__logo" src="img/logo3.png" alt="logo"
+          /></a>
+          <h1 class="header__title">Чесна ціна за чесну якість</h1>
+          <a href="#" class="btn header__order_btn">Замовити зараз</a>
+        </div>
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__item"><a href="#">Про нас</a></li>
+            <li class="menu__item"><a href="#">Послуги та ціни</a></li>
+            <li class="menu__item"><a href="#">Фотографії</a></li>
+            <li class="menu__item"><a href="#">Контакти</a></li>
+          </ul>
+          <div class="menu__btns">
+            <a class="btn menu__btn login" href="#">Увійти</a>
+            <a class="btn menu__btn signup" href="#">Реєстрація</a>
+          </div>
+        </nav>
+        <div class="menu_icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="burger_menu">
+          <ul class="burger_menu__list">
+            <li class="burger_menu__item"><a href="#">Про нас</a></li>
+            <li class="burger_menu__item"><a href="#">Послуги та ціни</a></li>
+            <li class="burger_menu__item"><a href="#">Фотографії</a></li>
+            <li class="burger_menu__item"><a href="#">Контакти</a></li>
+          </ul>
+          <div class="burger_menu__btns">
+            <a class="btn burger_menu__btn login" href="#">Увійти</a>
+            <a class="btn burger_menu__btn signup" href="#">Реєстрація</a>
+          </div>
+        </div>
+      </div>
+      <!-- modal -->
+      <div class="modal modal_signup">
+        <div class="modal__inner">
+          <div class="modal__close_btn">
+            <span></span>
+            <span></span>
+          </div>
+          <span class="top__scissors"></span>
+          <span class="bottom__scissors"></span>
+          <h2 class="modal__title">Реєстрація</h2>
+          <form id="signup" class="modal__form" action="">
+            <div class="form-field">
+              <label for="name" id="label">Ім'я</label>
+              <input
+                id="username"
+                class="modal__item"
+                type="text"
+                name="name"
+                placeholder="Введіть ім'я"
+                oninvalid="this.setCustomValidity('Це поле не може бути пустим')"
+              />
+              <small></small>
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input
+                id="email"
+                class="modal__item"
+                type="text"
+                name="email"
+                placeholder="Введіть email"
+                oninvalid="this.setCustomValidity('Це поле не може бути пустим')"
+              />
+              <small></small>
+            </div>
+            <div class="form-field">
+              <label for="password">Пароль</label>
+              <input
+                id="password"
+                class="modal__item"
+                type="text"
+                name="password"
+                placeholder="Введіть пароль"
+                oninvalid="this.setCustomValidity('Це поле не може бути пустим')"
+              />
+              <small></small>
+            </div>
+            <div class="form-field">
+              <label for="confirm-password">Підтвердіть пароль</label>
+              <input
+                id="confirm-password"
+                class="modal__item"
+                type="text"
+                name="confirm-password"
+                placeholder="Введіть пароль повторно"
+                oninvalid="this.setCustomValidity('Це поле не може бути пустим')"
+              />
+              <small></small>
+            </div>
+
+            <div class="form-field">
+              <input class="modal__btn" type="submit" value="Зареєструватись" />
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="modal modal_login">
+        <div class="modal__inner">
+          <div class="modal__close_btn">
+            <span></span>
+            <span></span>
+          </div>
+          <span class="top__scissors"></span>
+          <span class="bottom__scissors"></span>
+          <h2 class="modal__title">Вхід</h2>
+          <form action="" class="modal__form">
+            <label for="login">Логін (email)</label>
+            <input
+              class="modal__item"
+              type="text"
+              name="login"
+              placeholder="Введіть логін"
+            />
+            <label for="password">Пароль</label>
+            <input
+              class="modal__item"
+              type="password"
+              name="password"
+              placeholder="Введіть пароль"
+            />
+            <input
+              class="modal__item modal__btn"
+              type="submit"
+              value="Увійти"
+            />
+          </form>
+        </div>
+      </div>
+    </header>
+    <section class="about">
+      <div class="container">
+        <div class="about__inner">
+          <div class="title__box">
+            <span class="left__scissors"></span>
+            <h2 class="about__title">Про нас</h2>
+            <span class="right__scissors"></span>
+          </div>
+          <p class="about__descr">
+            <span>BARBERSHOP</span> - це суто чоловічий простір, де можна
+            повністю подбати про свій образ, в тому числі і зачіску.<br /><br />
+            Ми прагнемо створити не лише елегантний образ, а і відчуття комфорту
+            та затишку, щоб кожне відвідування нашого закладу залишало відчуття
+            зустрічі зі старими друзями.
+          </p>
+          <ul class="about__requests">
+            <li class="about__request_item">
+              <span>7+</span>
+              <p>Років на ринку</p>
+            </li>
+            <li class="about__request_item">
+              <span>200+</span>
+              <p>Професійних барберів</p>
+            </li>
+            <li class="about__request_item">
+              <span>2500+</span>
+              <p>Замовлень клієнтів</p>
+            </li>
+            <li class="about__request_item">
+              <span>5</span>
+              <p>Закладів по всьому світу</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="service">
+      <div class="container">
+        <div class="service__inner">
+          <div class="title__box">
+            <span class="left__scissors"></span>
+            <h2 class="service__title">Послуги та ціни</h2>
+            <span class="right__scissors"></span>
+          </div>
+          <div class="service__inner_box">
+            <div class="service__item">
+              <div class="service__img_box">
+                <img
+                  class="service__img"
+                  src="img/service1.png"
+                  alt="service-photo"
+                />
+              </div>
+              <div class="service__price">
+                <span>Стрижка</span>
+                <span>500 грн.</span>
+              </div>
+              <div class="service__descr">
+                Наша стрижка ретельно створена одним із наших довсідчених
+                перукарів. Звуження, вицвітання, видеркат, начісування, штучні
+                аструби, двоге волосся - ми робимо все.
+              </div>
+            </div>
+            <div class="service__item">
+              <div class="service__img_box">
+                <img
+                  class="service__img"
+                  src="img/service2.jpg"
+                  alt="service-photo"
+                />
+              </div>
+              <div class="service__price">
+                <span>Гоління</span>
+                <span>400 грн.</span>
+              </div>
+              <div class="service__descr">
+                Наша стрижка ретельно створена одним із наших довсідчених
+                перукарів. Звуження, вицвітання, видеркат, начісування, штучні
+                аструби, двоге волосся - ми робимо все.
+              </div>
+            </div>
+            <div class="service__item">
+              <div class="service__img_box">
+                <img
+                  class="service__img"
+                  src="img/service3.png"
+                  alt="service-photo"
+                />
+              </div>
+              <div class="service__price">
+                <span>Стрижка + гоління</span>
+                <span>800 грн.</span>
+              </div>
+              <div class="service__descr">
+                Наша стрижка ретельно створена одним із наших довсідчених
+                перукарів. Звуження, вицвітання, видеркат, начісування, штучні
+                аструби, двоге волосся - ми робимо все.
+              </div>
+            </div>
+            <div class="service__item">
+              <div class="service__img_box">
+                <img
+                  class="service__img"
+                  src="img/service4.jpg"
+                  alt="service-photo"
+                />
+              </div>
+              <div class="service__price">
+                <span>Стрижка бороди</span>
+                <span>300 грн.</span>
+              </div>
+              <div class="service__descr">
+                Наша стрижка ретельно створена одним із наших довсідчених
+                перукарів. Звуження, вицвітання, видеркат, начісування, штучні
+                аструби, двоге волосся - ми робимо все.
+              </div>
+            </div>
+            <div class="service__item">
+              <div class="service__img_box">
+                <img
+                  class="service__img"
+                  src="img/service5.png"
+                  alt="service-photo"
+                />
+              </div>
+              <div class="service__price">
+                <span>Фарбування</span>
+                <span>600 грн.</span>
+              </div>
+              <div class="service__descr">
+                Наша стрижка ретельно створена одним із наших довсідчених
+                перукарів. Звуження, вицвітання, видеркат, начісування, штучні
+                аструби, двоге волосся - ми робимо все.
+              </div>
+            </div>
+            <div class="service__item">
+              <div class="service__img_box">
+                <img
+                  class="service__img"
+                  src="img/service6.jpg"
+                  alt="service-photo"
+                />
+              </div>
+              <div class="service__price">
+                <span>Догляд за обличям</span>
+                <span>550 грн.</span>
+              </div>
+              <div class="service__descr">
+                Наша стрижка ретельно створена одним із наших довсідчених
+                перукарів. Звуження, вицвітання, видеркат, начісування, штучні
+                аструби, двоге волосся - ми робимо все.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="swiper">
+      <div class="swiper mySwiper">
+        <div class="title__box">
+          <span class="left__scissors"></span>
+          <h2 class="swiper__title">Фотографії</h2>
+          <span class="right__scissors"></span>
+        </div>
+        <div class="swiper-wrapper">
+          <img
+            class="swiper-slide"
+            src="./img/room1.jpg"
+            alt="barber-room-photo"
+          />
+          <img
+            class="swiper-slide"
+            src="./img/room2.jpg"
+            alt="barber-room-photo"
+          />
+          <img
+            class="swiper-slide"
+            src="./img/room3.jpg"
+            alt="barber-room-photo"
+          />
+          <img
+            class="swiper-slide"
+            src="./img/room5.jpg"
+            alt="barber-room-photo"
+          />
+          <img
+            class="swiper-slide"
+            src="./img/room4.jpg"
+            alt="barber-room-photo"
+          />
+          <img
+            class="swiper-slide"
+            src="./img/room6.jpg"
+            alt="barber-room-photo"
+          />
+          <img
+            class="swiper-slide"
+            src="./img/room7.jpg"
+            alt="barber-room-photo"
+          />
+        </div>
+      </div>
+      <span class="swiper-button-next"></span>
+      <span class="swiper-button-prev"></span>
+    </section>
+    <footer>
+      <div class="footer__inner">
+        <div class="footer__contact">
+          <a href="#"
+            ><img class="footer__logo" src="img/logo3.png" alt="footer-logo"
+          /></a>
+          <ul class="footer__links_list">
+            <li class="footer__link_item">
+              <a class="footer__facebook" href="#"></a>
+            </li>
+            <li class="footer__link_item">
+              <a class="footer__twitter" href="#"></a>
+            </li>
+            <li class="footer__link_item">
+              <a class="footer__telegram" href="#"></a>
+            </li>
+            <li class="footer__link_item">
+              <a class="footer__linkedin" href="#"></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__descr">
+          <p>
+            У нас працюють професійні барбери, які підберуть ідеальну зачіску,
+            порекомендують догляд за волоссям та шкірою, і проконсультують з
+            усіх цікавих вам питань. <br /><br />
+            А ви в цей час можете насолодитись смачними напоями та атмосферою
+            наче з фільму Kingsman.
+          </p>
+          <p class="footer__phone">
+            <span class="footer__yellow_text">Телефон: </span
+            ><a href="tel:+380994131326">+38 (044) 392 32 11</a>
+          </p>
+          <p class="footer__email">
+            <span class="footer__yellow_text">Email: </span
+            ><a href="https://mail.google.com/mail/u/3/#inbox"
+              >barbershopkyiv@gmail.com</a
+            >
+          </p>
+        </div>
+        <div class="footer__map">
+          <div class="title__box">
+            <span class="left__scissors"></span>
+            <h2 class="footer__map_title">Заклади</h2>
+            <span class="right__scissors"></span>
+          </div>
+          <ul class="footer__map_list">
+            <li class="footer__map_list_item">
+              <span class="footer__yellow_text">м.Оболонь: </span>Персова, 11
+              <span class="footer__map_icon"></span>
+            </li>
+            <li class="footer__map_list_item">
+              <span class="footer__yellow_text">м.Хрещатик: </span>Персова, 11
+              <span class="footer__map_icon"></span>
+            </li>
+            <li class="footer__map_list_item">
+              <span class="footer__yellow_text">м.Дарниця: </span>Будівельників,
+              36
+              <span class="footer__map_icon"></span>
+            </li>
+            <li class="footer__map_list_item">
+              <span class="footer__yellow_text">м.Позняки: </span
+              >Срібновільська, 3
+              <span class="footer__map_icon"></span>
+            </li>
+            <li class="footer__map_list_item">
+              <span class="footer__yellow_text">м.Оболонь: </span>Персова, 11
+              <span class="footer__map_icon"></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer__bottom_text">
+        Copyrights ID 2015-2022 BARBERSHOP, All Rights Reserved
+      </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
